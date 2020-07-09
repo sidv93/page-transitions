@@ -1,17 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
-
-//Components
 import ScrollForMore from "../components/scrollForMore";
-//Ease
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 
 const firstName = {
-  initial: {
-    y: 0,
-  },
   animate: {
-    y: 0,
     transition: {
       delayChildren: 0.6,
       staggerChildren: 0.04,
@@ -21,11 +14,7 @@ const firstName = {
 };
 
 const lastName = {
-  initial: {
-    y: 0,
-  },
   animate: {
-    y: 0,
     transition: {
       delayChildren: 0.6,
       staggerChildren: 0.04,
@@ -126,7 +115,7 @@ const Model = ({ imageDetails }) => {
                     src={require("../images/yasmeen.webp")}
                     alt='an image'
                     style={{ scale: scale }}
-                    initial={{ scale: 1.0 }}
+                    initial={{ scale: 1.1 }}
                     animate={{
                       transition: { delay: 0.2, ...transition },
                       y: window.innerWidth > 1440 ? -1200 : -600,
